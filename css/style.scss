@@ -1,0 +1,61 @@
+$primary-color: #00a99d;
+
+main::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+
+}
+main::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 15px;
+}
+#chat {
+  position: fixed;
+  right: 15px;
+  bottom: 0;
+  width: 400px;
+  border: 1px solid $primary-color;
+  border-radius: 5px 5px 0 0;
+  header {
+    background: $primary-color;
+    color: white;
+    padding: 10px;
+    .upper {
+      font-weight: bold;
+    }
+    .lower {
+      padding: 10px 30px;
+      font-size: 0.9em;
+    }
+  }
+  main {
+    height: 300px;
+    padding: 20px;
+    overflow-y: scroll;
+    .message {
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 80%;
+      min-width: 51%;
+      font-size: 0.9em;
+      position: relative;
+      margin: 20px 0;
+      &.support {
+        background: $primary-color;
+        color: white;
+        float: left;
+      }
+      &.users {
+        background: #ddd;
+        color: #000000;
+        float: right;
+      }
+      .times {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+        color: #000000;
+      }
+    }
+  }
+}
